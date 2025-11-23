@@ -1,5 +1,11 @@
 .. SPDX-License-Identifier: AGPL-3.0-or-later
 
+.. figure:: https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg
+   :target: https://github.com/porespellar/searxng-LDR-academic
+   :alt: SearXNG
+   :width: 400px
+   :align: center
+
 SearXNG LDR-Academic Fork
 ==========================
 
