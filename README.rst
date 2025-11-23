@@ -1,64 +1,147 @@
 .. SPDX-License-Identifier: AGPL-3.0-or-later
 
-.. _metasearch engine: https://en.wikipedia.org/wiki/Metasearch_engine
-.. _Installation guide: https://docs.searxng.org/admin/installation.html
-.. _Configuration guide: https://docs.searxng.org/admin/settings/index.html
-.. _CONTRIBUTING: https://github.com/searxng/searxng/blob/master/CONTRIBUTING.rst
-.. _LICENSE: https://github.com/searxng/searxng/blob/master/LICENSE
+SearXNG LDR-Academic Fork
+==========================
 
-.. figure:: https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg
-   :target: https://searxng.org
-   :alt: SearXNG
-   :width: 512px
+A specialized academic research fork of SearXNG, optimized for professional and academic use.
 
+.. image:: https://img.shields.io/badge/version-0.1.0-blue?style=flat-square
+   :alt: Version 0.1.0
 
-SearXNG is a `metasearch engine`_. Users are neither tracked nor profiled.
-
-.. image:: https://img.shields.io/badge/organization-3050ff?style=flat-square&logo=searxng&logoColor=fff&cacheSeconds=86400
-   :target: https://github.com/searxng
-   :alt: Organization
-
-.. image:: https://img.shields.io/badge/documentation-3050ff?style=flat-square&logo=readthedocs&logoColor=fff&cacheSeconds=86400
-   :target: https://docs.searxng.org
-   :alt: Documentation
-
-.. image:: https://img.shields.io/github/license/searxng/searxng?style=flat-square&label=license&color=3050ff&cacheSeconds=86400
+.. image:: https://img.shields.io/github/license/searxng/searxng?style=flat-square&label=license&color=3050ff
    :target: https://github.com/searxng/searxng/blob/master/LICENSE
-   :alt: License
+   :alt: License AGPL-3.0
 
-.. image:: https://img.shields.io/github/commit-activity/y/searxng/searxng/master?style=flat-square&label=commits&color=3050ff&cacheSeconds=3600
-   :target: https://github.com/searxng/searxng/commits/master/
-   :alt: Commits
+Overview
+========
 
-.. image:: https://img.shields.io/weblate/progress/searxng?server=https%3A%2F%2Ftranslate.codeberg.org&style=flat-square&label=translated&color=3050ff&cacheSeconds=86400
-   :target: https://translate.codeberg.org/projects/searxng/
-   :alt: Translated
+This is a curated fork of SearXNG designed specifically for academic research and professional workplace environments. It removes NSFW content, focuses on academic search engines, and provides a clean, distraction-free search experience.
 
-Setup
-=====
+Key Features
+============
 
-To install SearXNG, see `Installation guide`_.
+**Academic-First Search**
+  - Dedicated "Academic" category with 8 research-focused search engines
+  - Organized subcategories: General, Life Sciences, Open Access, Publishing
+  - Includes arXiv, Google Scholar, Semantic Scholar, PubMed, CrossRef, OpenAIRE, and PDBe
 
-To fine-tune SearXNG, see `Configuration guide`_.
+**Workplace Safe**
+  - All NSFW, torrent, and piracy engines removed
+  - Videos, music, files, and social media categories disabled
+  - Strict safe search enabled by default
 
-Further information on *how-to* can be found `here <https://docs.searxng.org/admin/index.html>`_.
+**Privacy & Security**
+  - No user tracking or profiling
+  - Security audited (0 critical/high vulnerabilities via Trivy & Grype)
+  - AGPL-3.0 licensed
 
-Connect
-=======
+**Clean Interface**
+  - "LDR-academic Fork" branding throughout
+  - Professional appearance suitable for academic institutions
+  - US English as default language
 
-If you have questions or want to connect with others in the community,
-we have two official channels:
+Quick Start
+===========
 
-- `#searxng:matrix.org <https://matrix.to/#/#searxng:matrix.org>`_
-- `#searxng @ libera.chat <https://web.libera.chat/?channel=#searxng>`_ (bridged to Matrix)
+See `INSTALL.md <./INSTALL.md>`_ for detailed installation instructions.
+
+Docker Quick Start::
+
+    # Clone the repository
+    git clone https://github.com/porespellar/searxng-LDR-academic.git
+    cd searxng-LDR-academic
+
+    # Build
+    docker build -t porespellar/searxng-ldr-academic .
+
+    # Run
+    docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
+
+Then visit http://localhost:8080
+
+Academic Search Engines
+========================
+
+**General Research (3 engines)**
+  - arXiv - Physics, math, computer science preprints
+  - Google Scholar - Comprehensive academic search
+  - Semantic Scholar - AI-powered research papers
+
+**Life Sciences (2 engines)**
+  - PubMed - Biomedical literature database
+  - PDBe - Protein Data Bank Europe
+
+**Open Access (2 engines)**
+  - OpenAIRE Publications - European open research
+  - OpenAIRE Datasets - Research data repository
+
+**Publishing (1 engine)**
+  - CrossRef - DOI registry with 140M+ scholarly records
+
+Differences from Upstream SearXNG
+==================================
+
+**Removed Categories:**
+  - Videos
+  - Music  
+  - Files
+  - Social Media
+
+**Removed Engines:**
+  - All NSFW/adult content engines
+  - Torrent/piracy engines (Pirate Bay, KickassTorrents, etc.)
+  - Gambling/casino engines
+  - Video/audio streaming engines
+  - Social media search engines
+
+**Added Features:**
+  - Academic category with subcategories
+  - 8 academic search engines enabled by default
+  - Strict safe search enabled
+  - US English default language
+
+Integration with Local Deep Research
+======================================
+
+This fork is designed as a **drop-in replacement** for Step 1 in `Local Deep Research <https://github.com/LearningCircuit/local-deep-research>`_'s Quick Start (Option 1: Docker).
+
+**Step 1: Deploy this academic fork** (replaces their default SearXNG)::
+
+    # Clone and build this repository
+    git clone https://github.com/porespellar/searxng-LDR-academic.git
+    cd searxng-LDR-academic
+    docker build -t porespellar/searxng-ldr-academic .
+
+    # Run SearXNG
+    docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
+
+**Step 2: Deploy Local Deep Research** (Learning Circuit's Step 2)::
+
+    # Run Local Deep Research
+    docker run -d -p 5000:5000 --network host \
+      --name local-deep-research \
+      --volume 'deep-research:/data' \
+      -e LDR_DATA_DIR=/data \
+      localdeepresearch/local-deep-research
+
+Verify both are running:
+  - SearXNG: http://localhost:8080
+  - Local Deep Research: http://localhost:5000
+
+See `INSTALL.md <./INSTALL.md>`_ for detailed instructions.
 
 Contributing
 ============
 
-See CONTRIBUTING_ for more details.
+This is a specialized fork maintained for academic research purposes. For contributions to the upstream SearXNG project, see the `official SearXNG repository <https://github.com/searxng/searxng>`_.
 
 License
 =======
 
 This project is licensed under the GNU Affero General Public License (AGPL-3.0).
-See LICENSE_ for more details.
+See `LICENSE <./LICENSE>`_ for more details.
+
+Acknowledgments
+===============
+
+Built on `SearXNG <https://github.com/searxng/searxng>`_ - a privacy-respecting metasearch engine.

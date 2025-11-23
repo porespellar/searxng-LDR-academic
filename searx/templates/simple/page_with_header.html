@@ -1,7 +1,10 @@
 {%- set body_class = "page_with_header" -%}
 {%- extends "simple/base.html" -%}
 {%- block header -%}
-  <a href="{{ url_for('index') }}">{{- '' -}}
-    <img class="logo" src="{{ url_for('static', filename='img/searxng.png') }}" alt="SearXNG">{{- '' -}}
-  </a>{{- '' -}}
+<a href="{{ url_for('index') }}">{{- '' -}}
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img class="logo" src="{{ url_for('static', filename='img/searxng.png') }}" alt="SearXNG" style="height: 40px;">
+    <span style="font-size: 12px; color: var(--color-base-font); margin-top: 2px;">LDR-academic Fork</span>
+  </div>{{- '' -}}
+</a>{{- '' -}}
 {%- endblock -%}

@@ -3,3 +3,4 @@
 !container/entrypoint.sh
 !searx/**
 !requirements*.txt
+
