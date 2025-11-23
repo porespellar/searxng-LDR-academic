@@ -83,11 +83,7 @@ This fork is designed as a **drop-in replacement** for Step 1 in `Local Deep Res
 **Step 2: Deploy Local Deep Research** (Learning Circuit's Step 2)::
 
     # Run Local Deep Research
-    docker run -d -p 5000:5000 --network host \
-      --name local-deep-research \
-      --volume 'deep-research:/data' \
-      -e LDR_DATA_DIR=/data \
-      localdeepresearch/local-deep-research
+    docker run -d -p 5000:5000 --network host --name local-deep-research --volume 'deep-research:/data' -e LDR_DATA_DIR=/data localdeepresearch/local-deep-research
 
 Verify both are running:
   - SearXNG: http://localhost:8080
