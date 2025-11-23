@@ -26,19 +26,23 @@ A specialized fork of SearXNG designed for academic research and professional en
 
 ## 📦 Installation
 
+**Clone the repository:**
 ```bash
-# Clone the repository
 git clone https://github.com/porespellar/searxng-LDR-academic.git
 cd searxng-LDR-academic
+```
 
-# Build
+**Build the Docker image:**
+```bash
 docker build -t porespellar/searxng-ldr-academic .
+```
 
-# Run
+**Run the container:**
+```bash
 docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
 ```
 
-Visit http://localhost:8080
+**Access:** http://localhost:8080
 
 ## 🔬 Academic Search Engines
 
