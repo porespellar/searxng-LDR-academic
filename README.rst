@@ -152,3 +152,39 @@ Acknowledgments
 ===============
 
 Built on `SearXNG <https://github.com/searxng/searxng>`_ - a privacy-respecting metasearch engine.
+
+Disclaimer
+==========
+
+**No Affiliation**
+
+This project (porespellar/searxng-LDR-academic) is an independent fork and is **not affiliated with, endorsed by, or supported by** the SearXNG project or Learning Circuit. The maintainer (porespellar) has no official relationship with either organization.
+
+**No Warranty**
+
+This software is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. The entire risk as to the quality and performance of the software is with you.
+
+**Use At Your Own Risk**
+
+In no event shall the authors, copyright holders, or contributors be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+
+**Limitation of Liability**
+
+To the maximum extent permitted by applicable law, in no event will porespellar or any contributors be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:
+
+  - Your use or inability to use the software
+  - Any unauthorized access to or use of our servers and/or any personal information stored therein
+  - Any bugs, viruses, trojan horses, or the like that may be transmitted to or through the software
+  - Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content posted, emailed, transmitted, or otherwise made available through the software
+
+**License Terms**
+
+This software is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). See the `LICENSE <./LICENSE>`_ file for full terms, which include additional warranty disclaimers and limitations of liability.
+
+**Third-Party Services**
+
+This software integrates with third-party search engines and services. The maintainer is not responsible for the availability, accuracy, or content provided by these external services.
+
+**User Responsibility**
+
+By using this software, you acknowledge that you have read this disclaimer, understand it, and agree to be bound by its terms. You are solely responsible for determining the appropriateness of using this software and assume all risks associated with its use.
