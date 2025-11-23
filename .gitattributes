@@ -1,12 +1,7 @@
-*.gif -diff
-*.png -diff
-*.min.css -diff
-*.min.js -diff
-*.css.map -diff
-*.js.map -diff
-*.eot -diff
-*.svg -diff
-*.ttf -diff
-*.woff -diff
-*.woff2 -diff
-messages.mo -diff
+# Enforce LF line endings for shell scripts
+*.sh text eol=lf
+container/docker-entrypoint.sh text eol=lf
+
+# Enforce LF for other potential script files
+*.py text eol=lf
+Dockerfile text eol=lf
