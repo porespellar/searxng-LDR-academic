@@ -9,7 +9,7 @@
 SearXNG LDR-Academic Fork
 ==========================
 
-A specialized academic research fork of SearXNG, optimized for professional and academic use.
+A specialized academic research fork of SearXNG designed as a **drop-in replacement** for `Learning Circuit's Local Deep Research <https://github.com/LearningCircuit/local-deep-research>`_. This fork is optimized for professional and academic workplace environments, with NSFW content removed and a focus on scholarly search engines.
 
 .. image:: https://img.shields.io/badge/version-0.1.0-blue?style=flat-square
    :alt: Version 0.1.0
