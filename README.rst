@@ -38,7 +38,7 @@ Key Features
 
 **Privacy & Security**
   - No user tracking or profiling
-  - Security audited (0 critical/high vulnerabilities via Trivy & Grype)
+  - Security audited (using Trivy and Grype)
   - AGPL-3.0 licensed
 
 **Clean Interface**
