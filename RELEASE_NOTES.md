@@ -1,28 +1,20 @@
-# Release Notes - v0.1.0
+# Release Notes - v0.2.0
 
-**SearXNG LDR-Academic Fork v0.1.0** - First Official Release
+**SearXNG LDR-Academic Fork v0.2.0** - Expanded Academic Engine Support
 
-## 🎓 Academic Research Search Engine
+## 🚀 New Features
 
-A specialized fork of SearXNG designed for academic research and professional environments, with NSFW content removed and focus on scholarly search.
+### 4 New Academic Engines Added
+We have significantly expanded the academic search capabilities by enabling 4 powerful new engines (no API keys required):
 
-## ✨ Highlights
-
-### Academic-First Design
-- **8 Academic Search Engines** enabled by default
-- Organized into 4 subcategories: General, Life Sciences, Open Access, Publishing
-- Includes arXiv, Google Scholar, Semantic Scholar, PubMed, CrossRef, OpenAIRE, PDBe
-
-### Workplace Safe
-- ✅ All NSFW/adult content removed
-- ✅ No torrent/piracy engines
-- ✅ No social media or entertainment engines
-- ✅ Strict safe search enabled by default
-
-### Security Verified
-- ✅ **0 critical vulnerabilities** (Trivy scan)
-- ✅ **0 high vulnerabilities** (Grype scan)
-- ✅ Production-ready Docker image
+1.  **BASE (Bielefeld Academic Search Engine)**
+    *   One of the world's most voluminous search engines for academic web resources.
+2.  **OpenAlex**
+    *   A massive open catalog of scholarly works, authors, and institutions.
+3.  **Wolfram|Alpha (Science)**
+    *   Computational knowledge engine for mathematics, physics, and scientific data.
+4.  **Library of Congress**
+    *   Excellent resource for history, humanities, and visual research.
 
 ## 📦 Installation
 
@@ -48,10 +40,14 @@ docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
 
 **Access:** http://localhost:8080
 
-## 🔬 Academic Search Engines
+## 🔬 Full List of Academic Engines (12 Total)
 
 | Engine | Category | Focus Area |
 |--------|----------|------------|
+| **BASE** | General | Academic web resources (New!) |
+| **OpenAlex** | General | Scholarly catalog (New!) |
+| **Wolfram\|Alpha** | General | Computational knowledge (New!) |
+| **Library of Congress** | General | History & Humanities (New!) |
 | arXiv | General | Physics, Math, CS preprints |
 | Google Scholar | General | Comprehensive academic search |
 | Semantic Scholar | General | AI-powered research |
@@ -59,41 +55,8 @@ docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
 | PDBe | Life Sciences | Protein structures |
 | OpenAIRE Publications | Open Access | European research |
 | OpenAIRE Datasets | Open Access | Research data |
-| CrossRef | Publishing | DOI registry (140M+ records) |
-
-## 🔄 Integration
-
-Designed to work with [Local Deep Research](https://github.com/localdeepresearch/local-deep-research):
-
-**Run SearXNG:**
-```bash
-docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
-```
-
-**Run LDR:**
-```bash
-docker run -d -p 5000:5000 --name local-deep-research --volume 'deep-research:/data' -e LDR_DATA_DIR=/data localdeepresearch/local-deep-research
-```
-
-## 🗑️ Removed Content
-
-**Categories:** Videos, Music, Files, Social Media  
-**Engines:** 50+ inappropriate engines removed including all torrent, NSFW, gambling, and social media engines
+| CrossRef | Publishing | DOI registry |
 
 ## 📝 Full Changelog
 
 See [CHANGELOG.md](./CHANGELOG.md) for detailed changes.
-
-## 📄 License
-
-AGPL-3.0 - Same as upstream SearXNG
-
-## 🙏 Acknowledgments
-
-Built on [SearXNG](https://github.com/searxng/searxng) - a privacy-respecting metasearch engine.
-
----
-
-**Docker Image:** `porespellar/searxng-ldr-academic:0.1.0`  
-**Documentation:** See [README.rst](./README.rst) and [INSTALL.md](./INSTALL.md)  
-**Security:** Verified clean via Trivy & Grype scans

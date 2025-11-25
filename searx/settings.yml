@@ -444,9 +444,11 @@ engines:
   #   disabled: true
 
   # tmp suspended:  dh key too small
-  # - name: base
-  #   engine: base
-  #   shortcut: bs
+  - name: base
+    engine: base
+    shortcut: bs
+    categories: [academic, general]
+    disabled: false
 
 
 
@@ -1009,8 +1011,8 @@ engines:
   - name: library of congress
     engine: loc
     shortcut: loc
-    categories: images
-    disabled: true
+    categories: [academic, general]
+    disabled: false
 
   - name: libretranslate
     engine: libretranslate
@@ -1229,7 +1231,8 @@ engines:
     # Recommended by OpenAlex: join the polite pool with an email address
     # mailto: "[email protected]"
     timeout: 5.0
-    disabled: true
+    categories: [academic, general]
+    disabled: false
 
   - name: openclipart
     engine: openclipart
@@ -1865,8 +1868,8 @@ engines:
     # Or you can use the html non-stable engine, activated by default
     engine: wolframalpha_noapi
     timeout: 6.0
-    categories: general
-    disabled: true
+    categories: [academic, general]
+    disabled: false
 
   - name: dictzone
     engine: dictzone

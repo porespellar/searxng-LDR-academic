@@ -4,6 +4,16 @@ All notable changes to SearXNG LDR-Academic Fork will be documented in this file
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [v0.2.0] - 2025-11-25
+
+### Added
+- **4 New Academic Search Engines:**
+  - **BASE (Bielefeld Academic Search Engine):** Massive index of academic web resources.
+  - **OpenAlex:** Open catalog of scholarly works, authors, and institutions.
+  - **Wolfram|Alpha (Science):** Computational knowledge engine for math and science.
+  - **Library of Congress:** Resources for history, humanities, and visual materials.
+- Updated documentation to reflect new engines.
+
 ## [0.1.0] - 2025-11-23
 
 ### Added

@@ -11,8 +11,8 @@ SearXNG LDR-Academic Fork
 
 A specialized academic research fork of SearXNG designed as a **drop-in replacement** for `Learning Circuit's Local Deep Research <https://github.com/LearningCircuit/local-deep-research>`_. This fork is optimized for professional and academic workplace environments, with NSFW content removed and a focus on scholarly search engines.
 
-.. image:: https://img.shields.io/badge/version-0.1.0-blue?style=flat-square
-   :alt: Version 0.1.0
+.. image:: https://img.shields.io/badge/version-0.2.0-blue?style=flat-square
+   :alt: Version 0.2.0
 
 .. image:: https://img.shields.io/github/license/searxng/searxng?style=flat-square&label=license&color=3050ff
    :target: https://github.com/searxng/searxng/blob/master/LICENSE
@@ -107,10 +107,14 @@ See `INSTALL.md <./INSTALL.md>`_ for detailed instructions.
 Academic Search Engines
 ========================
 
-**General Research (3 engines)**
+**General Research (7 engines)**
   - arXiv - Physics, math, computer science preprints
+  - BASE - Bielefeld Academic Search Engine (voluminous academic web resources)
   - Google Scholar - Comprehensive academic search
+  - Library of Congress - History, humanities, and visual research
+  - OpenAlex - Open catalog of scholarly works (papers, authors, institutions)
   - Semantic Scholar - AI-powered research papers
+  - Wolfram|Alpha (Science) - Computational knowledge, math, and physics
 
 **Life Sciences (2 engines)**
   - PubMed - Biomedical literature database
