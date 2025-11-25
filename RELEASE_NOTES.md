@@ -29,6 +29,10 @@ A specialized fork of SearXNG designed for academic research and professional en
 **Clone the repository:**
 ```bash
 git clone https://github.com/porespellar/searxng-LDR-academic.git
+```
+
+**Navigate to the directory:**
+```bash
 cd searxng-LDR-academic
 ```
 

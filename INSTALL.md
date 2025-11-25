@@ -11,6 +11,11 @@ This SearXNG fork is designed to work with [Learning Circuit's Local Deep Resear
 ```bash
 # Clone this repository
 git clone https://github.com/porespellar/searxng-LDR-academic.git
+```
+
+**Navigate to the directory:**
+
+```bash
 cd searxng-LDR-academic
 ```
 

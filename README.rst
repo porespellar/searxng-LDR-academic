@@ -51,16 +51,20 @@ Quick Start
 
 See `INSTALL.md <./INSTALL.md>`_ for detailed installation instructions.
 
-Docker Quick Start::
+Clone the repository::
 
-    # Clone the repository
     git clone https://github.com/porespellar/searxng-LDR-academic.git
+
+Navigate to the directory::
+
     cd searxng-LDR-academic
 
-    # Build
+Build::
+
     docker build -t porespellar/searxng-ldr-academic .
 
-    # Run
+Run::
+
     docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
 
 Then visit http://localhost:8080
@@ -72,10 +76,16 @@ This fork is designed as a **drop-in replacement** for Step 1 in `Local Deep Res
 
 **Step 1: Deploy this academic fork** (replaces their default SearXNG)
 
-Clone and build this repository::
+Clone this repository::
 
     git clone https://github.com/porespellar/searxng-LDR-academic.git
+
+Navigate to the directory::
+
     cd searxng-LDR-academic
+
+Build this repository::
+
     docker build -t porespellar/searxng-ldr-academic .
 
 Run SearXNG::
