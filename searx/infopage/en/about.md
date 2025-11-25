@@ -4,6 +4,18 @@ SearXNG is a [metasearch engine], aggregating the results of other
 {{link('search engines', 'preferences')}} while not storing information about
 its users.
 
+## About this Fork (LDR-Academic)
+
+This is a specialized fork of SearXNG designed for **academic research** and **professional workplace environments**.
+
+**Key Differences:**
+- **Academic Focus:** Optimized for scholarly research with 12+ academic engines enabled (BASE, OpenAlex, Wolfram|Alpha, Library of Congress, etc.).
+- **Workplace Safe:** All NSFW, torrent, piracy, and entertainment content has been removed.
+- **Integration:** Designed as a drop-in replacement for [Local Deep Research](https://github.com/LearningCircuit/local-deep-research).
+- **Security:** Hardened configuration with strict safe search and security auditing.
+
+*Maintained by porespellar. Not affiliated with the official SearXNG project.*
+
 The SearXNG project is driven by an open community. Come join us on Matrix if
 you have questions or just want to chat about SearXNG at [#searxng:matrix.org]
 
