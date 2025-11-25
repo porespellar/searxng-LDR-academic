@@ -101,6 +101,9 @@ Verify both are running:
   - SearXNG: http://localhost:8080
   - Local Deep Research: http://localhost:5000
 
+.. note::
+   You will still need to install **Ollama**, **LM Studio**, or some other form of OpenAI compatible endpoint along with your LLM of choice. We recommend **GPT-OSS:20b** or **GPT-OSS:120b**.
+
 See `INSTALL.md <./INSTALL.md>`_ for detailed instructions.
 
 Academic Search Engines

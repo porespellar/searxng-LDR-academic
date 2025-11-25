@@ -43,6 +43,8 @@ Verify it's running: http://localhost:8080
 docker run -d -p 5000:5000 --name local-deep-research --volume 'deep-research:/data' -e LDR_DATA_DIR=/data localdeepresearch/local-deep-research
 ```
 
+> **Note:** You will still need to install **Ollama**, **LM Studio**, or some other form of OpenAI compatible endpoint along with your LLM of choice. We recommend **GPT-OSS:20b** or **GPT-OSS:120b**.
+
 Verify it's running: http://localhost:5000
 
 ## What This Fork Provides
