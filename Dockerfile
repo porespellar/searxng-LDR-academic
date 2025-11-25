@@ -27,7 +27,7 @@ RUN sed -i 's/margin-top:26vh/margin:0!important;padding:0!important;display:fle
     sed -i 's/margin-top:26vh/margin:0!important;padding:0!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;min-height:100vh!important;position:relative!important;margin-top:0/g' ./searx/static/themes/simple/css/searxng-rtl.min.css && \
     sed -i 's/margin-top:6em}/margin-top:0}/g' ./searx/static/themes/simple/css/searxng-ltr.min.css && \
     sed -i 's/margin-top:6em}/margin-top:0}/g' ./searx/static/themes/simple/css/searxng-rtl.min.css
-RUN sed -i "s/searxng_extra_version = ''/searxng_extra_version = '-LDR-academic-0.2.0'/g" searx/version.py_frozen.py && \
+RUN sed -i "s/searxng_extra_version = ''/searxng_extra_version = '-LDR-academic-0.2.0'/g" searx/version.py && \
     echo "GIT_BRANCH = 'main'" >> ./searx/version_frozen.py && \
     echo "GIT_REVISION = 'v0.1.0'" >> ./searx/version_frozen.py
 
