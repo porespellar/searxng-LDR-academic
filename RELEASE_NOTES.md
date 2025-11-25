@@ -40,6 +40,8 @@ docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
 
 **Access:** http://localhost:8080
 
+> **Tip:** You can adjust search settings, including enabling or disabling specific search engines, by clicking the **Preferences** link on the main page.
+
 ## 🔬 Full List of Academic Engines (12 Total)
 
 | Engine | Category | Focus Area |

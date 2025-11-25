@@ -68,6 +68,8 @@ Run::
 
 Then visit http://localhost:8080
 
+You can adjust search settings, including enabling or disabling specific search engines, by clicking the **Preferences** link on the main page.
+
 Integration with Local Deep Research
 ======================================
 

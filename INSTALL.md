@@ -33,6 +33,8 @@ docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
 
 Verify it's running: http://localhost:8080
 
+> **Tip:** You can adjust search settings, including enabling or disabling specific search engines, by clicking the **Preferences** link on the main page.
+
 ### Step 2: Deploy Local Deep Research (Learning Circuit's Step 2)
 
 **Continue with Learning Circuit's setup:**
