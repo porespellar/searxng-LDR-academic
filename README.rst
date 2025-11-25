@@ -9,7 +9,7 @@
 SearXNG LDR-Academic Fork
 ==========================
 
-A specialized academic research fork of SearXNG designed as a **drop-in replacement** for the default SearXNG search engine that is normally paired with `Learning Circuit's Local Deep Research <https://github.com/LearningCircuit/local-deep-research>`_. This fork is optimized for professional and academic workplace environments, with NSFW content removed and a focus on scholarly search engines.
+A specialized academic research-focused fork of SearXNG designed as a **drop-in replacement** for the default SearXNG search engine that is normally paired with `Learning Circuit's Local Deep Research <https://github.com/LearningCircuit/local-deep-research>`_. This fork is optimized for professional and academic workplace environments, with search engines associated with NSFW content removed, and more of a focus on text-based academic scholarly search engines.
 
 .. image:: https://img.shields.io/badge/version-0.2.0-blue?style=flat-square
    :alt: Version 0.2.0
@@ -27,13 +27,13 @@ Key Features
 ============
 
 **Academic-First Search**
-  - Dedicated "Academic" category with 8 research-focused search engines
+  - Dedicated new "Academic" category (in preferences) with 12 additional research-focused search engines added to the list of previously available search engine choices
   - Organized subcategories: General, Life Sciences, Open Access, Publishing
   - Includes arXiv, Google Scholar, Semantic Scholar, PubMed, CrossRef, OpenAIRE, and PDBe
 
 **Workplace Safe**
   - All NSFW, torrent, and piracy engines removed
-  - Videos, music, files, and social media categories disabled
+  - Videos, music, and social media categories disabled
   - Strict safe search enabled by default
 
 **Privacy & Security**
@@ -44,7 +44,6 @@ Key Features
 **Clean Interface**
   - "LDR-academic Fork" branding throughout
   - Professional appearance suitable for academic institutions
-  - US English as default language
 
 Quick Start
 ===========
