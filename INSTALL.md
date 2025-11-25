@@ -28,7 +28,7 @@ Verify it's running: http://localhost:8080
 
 ```bash
 # Pull and run Local Deep Research (Please build your own docker on ARM)
-docker run -d -p 5000:5000 --network host --name local-deep-research --volume 'deep-research:/data' -e LDR_DATA_DIR=/data localdeepresearch/local-deep-research
+docker run -d -p 5000:5000 --name local-deep-research --volume 'deep-research:/data' -e LDR_DATA_DIR=/data localdeepresearch/local-deep-research
 ```
 
 Verify it's running: http://localhost:5000

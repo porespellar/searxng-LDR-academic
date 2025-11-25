@@ -66,11 +66,7 @@ Designed to work with [Local Deep Research](https://github.com/localdeepresearch
 docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
 
 # Run LDR
-docker run -d -p 5000:5000 --network host \
-  --name local-deep-research \
-  --volume 'deep-research:/data' \
-  -e LDR_DATA_DIR=/data \
-  localdeepresearch/local-deep-research
+docker run -d -p 5000:5000 --name local-deep-research --volume 'deep-research:/data' -e LDR_DATA_DIR=/data localdeepresearch/local-deep-research
 ```
 
 ## 🗑️ Removed Content
