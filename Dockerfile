@@ -28,8 +28,12 @@ RUN sed -i 's/margin-top:26vh/margin:0!important;padding:0!important;display:fle
     sed -i 's/margin-top:6em}/margin-top:0}/g' ./searx/static/themes/simple/css/searxng-ltr.min.css && \
     sed -i 's/margin-top:6em}/margin-top:0}/g' ./searx/static/themes/simple/css/searxng-rtl.min.css
 RUN sed -i "s/searxng_extra_version = ''/searxng_extra_version = '-LDR-academic-0.2.0'/g" searx/version.py && \
+    echo "VERSION_STRING = 'v0.2.0'" > ./searx/version_frozen.py && \
+    echo "VERSION_TAG = 'v0.2.0'" >> ./searx/version_frozen.py && \
+    echo "DOCKER_TAG = '0.2.0-ldr.academic'" >> ./searx/version_frozen.py && \
+    echo "GIT_URL = 'https://github.com/porespellar/searxng-LDR-academic'" >> ./searx/version_frozen.py && \
     echo "GIT_BRANCH = 'main'" >> ./searx/version_frozen.py && \
-    echo "GIT_REVISION = 'v0.1.0'" >> ./searx/version_frozen.py
+    echo "GIT_REVISION = 'v0.2.0'" >> ./searx/version_frozen.py
 
 ARG TIMESTAMP_SETTINGS="0"
 
