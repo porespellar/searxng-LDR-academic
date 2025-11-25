@@ -70,19 +70,22 @@ Integration with Local Deep Research
 
 This fork is designed as a **drop-in replacement** for Step 1 in `Local Deep Research <https://github.com/LearningCircuit/local-deep-research>`_'s Quick Start (Option 1: Docker).
 
-**Step 1: Deploy this academic fork** (replaces their default SearXNG)::
+**Step 1: Deploy this academic fork** (replaces their default SearXNG)
 
-    # Clone and build this repository
+Clone and build this repository::
+
     git clone https://github.com/porespellar/searxng-LDR-academic.git
     cd searxng-LDR-academic
     docker build -t porespellar/searxng-ldr-academic .
 
-    # Run SearXNG
+Run SearXNG::
+
     docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
 
-**Step 2: Deploy Local Deep Research** (Learning Circuit's Step 2)::
+**Step 2: Deploy Local Deep Research** (Learning Circuit's Step 2)
 
-    # Run Local Deep Research
+Run Local Deep Research::
+
     docker run -d -p 5000:5000 --name local-deep-research --volume 'deep-research:/data' -e LDR_DATA_DIR=/data localdeepresearch/local-deep-research
 
 Verify both are running:

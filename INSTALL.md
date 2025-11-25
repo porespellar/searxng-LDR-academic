@@ -12,11 +12,17 @@ This SearXNG fork is designed to work with [Learning Circuit's Local Deep Resear
 # Clone this repository
 git clone https://github.com/porespellar/searxng-LDR-academic.git
 cd searxng-LDR-academic
+```
 
-# Build the Docker image
+**Build the Docker image:**
+
+```bash
 docker build -t porespellar/searxng-ldr-academic .
+```
 
-# Run SearXNG
+**Run SearXNG:**
+
+```bash
 docker run -d -p 8080:8080 --name searxng porespellar/searxng-ldr-academic
 ```
 
@@ -26,8 +32,9 @@ Verify it's running: http://localhost:8080
 
 **Continue with Learning Circuit's setup:**
 
+**Pull and run Local Deep Research (Please build your own docker on ARM):**
+
 ```bash
-# Pull and run Local Deep Research (Please build your own docker on ARM)
 docker run -d -p 5000:5000 --name local-deep-research --volume 'deep-research:/data' -e LDR_DATA_DIR=/data localdeepresearch/local-deep-research
 ```
 
