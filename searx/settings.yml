@@ -231,7 +231,7 @@ plugins:
   searx.plugins.unit_converter.SXNGPlugin:
     active: true
 
-  searx.plugins.ahmia_filter.SXNGPlugin:
+  # searx.plugins.ahmia_filter.SXNGPlugin:
     active: true
 
   searx.plugins.hostnames.SXNGPlugin:
@@ -327,10 +327,8 @@ checker:
 categories_as_tabs:
   general:
   images:
-
   news:
   map:
-
   it:
   science:
   academic:
@@ -345,15 +343,15 @@ engines:
 
 
 
-  - name: adobe stock
-    engine: adobe_stock
-    shortcut: asi
-    categories: ["images"]
-    # https://docs.searxng.org/dev/engines/online/adobe_stock.html
-    adobe_order: relevance
-    adobe_content_types: ["photo", "illustration", "zip_vector", "template", "3d", "image"]
-    timeout: 6
-    disabled: true
+  # - name: adobe stock
+  #   engine: adobe_stock
+  #   shortcut: asi
+  #   categories: ["images"]
+  #   # https://docs.searxng.org/dev/engines/online/adobe_stock.html
+  #   adobe_order: relevance
+  #   adobe_content_types: ["photo", "illustration", "zip_vector", "template", "3d", "image"]
+  #   timeout: 6
+  #   disabled: true
 
 
 
@@ -364,14 +362,14 @@ engines:
     api_key: ""
     inactive: true
 
-  - name: alpine linux packages
-    engine: alpinelinux
-    disabled: true
-    shortcut: alp
+  # - name: alpine linux packages
+  #   engine: alpinelinux
+  #   disabled: true
+  #   shortcut: alp
 
 
-  - name: ansa
-    engine: ansa
+  # - name: ansa
+  #   engine: ansa
     shortcut: ans
     disabled: true
 
@@ -386,8 +384,8 @@ engines:
 
 
   # Requires Tor
-  - name: ahmia
-    engine: ahmia
+  # - name: ahmia
+  #   engine: ahmia
     categories: onions
     enable_http: true
     shortcut: ah
@@ -418,16 +416,19 @@ engines:
     disabled: true
     categories: [it, software wikis]
 
-  - name: artic
-    engine: artic
-    shortcut: arc
-    timeout: 4.0
+  # - name: artic
+  #   engine: artic
+  #   shortcut: arc
+  #   timeout: 4.0
 
   - name: arxiv
     engine: arxiv
     shortcut: arx
     categories: [academic, general]
     disabled: false
+    about:
+      website: https://arxiv.org
+      description: "Open-access repository of preprints in physics, mathematics, computer science, and related fields"
 
   - name: ask
     engine: ask
@@ -449,6 +450,9 @@ engines:
     shortcut: bs
     categories: [academic, general]
     disabled: false
+    about:
+      website: https://www.base-search.net
+      description: "Bielefeld Academic Search Engine - one of the world's most voluminous search engines for academic web resources"
 
 
 
@@ -460,16 +464,26 @@ engines:
     # add "list" to the array to get results in the results list
     display_type: ["infobox"]
     categories: [general]
+    about:
+      website: https://www.wikipedia.org
+      description: "Free online encyclopedia with articles in multiple languages"
 
 
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: true
+    disabled: false
+    about:
+      website: https://www.bing.com
+      description: "Microsoft's web search engine"
 
   - name: bing images
     engine: bing_images
     shortcut: bii
+    disabled: false
+    about:
+      website: https://www.bing.com/images
+      description: "Microsoft Bing's image search engine"
 
   - name: bing news
     engine: bing_news
@@ -502,10 +516,11 @@ engines:
     disabled: true
 
 
-  - name: openverse
-    engine: openverse
-    categories: images
-    shortcut: opv
+  # - name: openverse
+  #   engine: openverse
+  #   categories: images
+  #   shortcut: opv
+  #   disabled: true
 
   - name: media.ccc.de
     engine: ccc_media
@@ -559,6 +574,9 @@ engines:
     timeout: 30
     categories: [academic, publishing]
     disabled: false
+    about:
+      website: https://www.crossref.org
+      description: "Official DOI registration agency with 140M+ scholarly records from publishers worldwide"
 
   - name: crowdview
     engine: json_engine
@@ -584,12 +602,12 @@ engines:
     timeout: 5
     disabled: true
 
-  - name: yep images
-    engine: yep
-    shortcut: yepi
-    categories: images
-    search_type: images
-    disabled: true
+  # - name: yep images
+  #   engine: yep
+  #   shortcut: yepi
+  #   categories: images
+  #   search_type: images
+  #   disabled: true
 
   - name: yep news
     engine: yep
@@ -637,9 +655,10 @@ engines:
     url_query: SourceURL
     title_query: Title
     content_query: Description
-    disabled: true
+    disabled: false
     about:
       website: https://encyclosearch.org
+      description: "Search engine for encyclopedias and free knowledge sources"
       official_api_documentation: https://encyclosearch.org/docs/#/rest-api
       use_official_api: true
       require_api_key: false
@@ -689,15 +708,21 @@ engines:
     display_type: ["infobox"]
     tests: *tests_infobox
     categories: [general]
+    about:
+      website: https://www.wikidata.org
+      description: "Free and open knowledge base with structured data"
 
   - name: duckduckgo
     engine: duckduckgo
     shortcut: ddg
+    about:
+      website: https://duckduckgo.com
+      description: "Privacy-focused search engine that doesn't track users"
 
-  - name: duckduckgo images
-    engine: duckduckgo_extra
-    categories: [images, web]
-    ddg_category: images
+  # - name: duckduckgo images
+  #   engine: duckduckgo_extra
+  #   categories: [images, web]
+  #   ddg_category: images
     shortcut: ddi
     disabled: true
 
@@ -713,7 +738,10 @@ engines:
     categories: [news, web]
     ddg_category: news
     shortcut: ddn
-    disabled: true
+    disabled: false
+    about:
+      website: https://duckduckgo.com
+      description: "Privacy-focused news search from DuckDuckGo"
 
   - name: duckduckgo weather
     engine: duckduckgo_weather
@@ -763,11 +791,11 @@ engines:
   #   disabled: true
   #   timeout: 5
 
-  - name: 1x
-    engine: www1x
-    shortcut: 1x
-    timeout: 3.0
-    disabled: true
+  # - name: 1x
+  #   engine: www1x
+  #   shortcut: 1x
+  #   timeout: 3.0
+  #   disabled: true
 
 
 
@@ -792,10 +820,10 @@ engines:
   # API key required, see: https://freesound.org/docs/api/overview.html
   #   api_key: MyAPIkey
 
-  - name: frinkiac
-    engine: frinkiac
-    shortcut: frk
-    disabled: true
+  # - name: frinkiac
+  #   engine: frinkiac
+  #   shortcut: frk
+  #   disabled: true
 
 
   - name: geizhals
@@ -879,10 +907,17 @@ engines:
     shortcut: go
     # additional_tests:
     #   android: *test_android
+    about:
+      website: https://www.google.com
+      description: "Comprehensive web search engine"
 
   - name: google images
     engine: google_images
     shortcut: goi
+    disabled: false
+    about:
+      website: https://www.google.com/imghp
+      description: "Google's image search engine"
     # additional_tests:
     #   android: *test_android
     #   dali:
@@ -904,13 +939,16 @@ engines:
     shortcut: gos
     categories: [academic, general]
     disabled: false
+    about:
+      website: https://scholar.google.com
+      description: "Comprehensive academic search engine for scholarly literature across disciplines"
 
 
 
-  - name: material icons
-    engine: material_icons
-    shortcut: mi
-    disabled: true
+  # - name: material icons
+  #   engine: material_icons
+  #   shortcut: mi
+  #   disabled: true
 
   - name: habrahabr
     engine: xpath
@@ -977,13 +1015,19 @@ engines:
   - name: huggingface
     engine: huggingface
     shortcut: hf
-    disabled: true
+    disabled: false
+    about:
+      website: https://huggingface.co
+      description: "Platform for machine learning models, datasets, and demos"
 
   - name: huggingface datasets
     huggingface_endpoint: datasets
     engine: huggingface
     shortcut: hfd
-    disabled: true
+    disabled: false
+    about:
+      website: https://huggingface.co/datasets
+      description: "Search for machine learning datasets on Hugging Face"
 
   - name: huggingface spaces
     huggingface_endpoint: spaces
@@ -1013,6 +1057,9 @@ engines:
     shortcut: loc
     categories: [academic, general]
     disabled: false
+    about:
+      website: https://www.loc.gov
+      description: "U.S. Library of Congress search for history, humanities, and visual research materials"
 
   - name: libretranslate
     engine: libretranslate
@@ -1102,7 +1149,10 @@ engines:
   - name: microsoft learn
     engine: microsoft_learn
     shortcut: msl
-    disabled: true
+    disabled: false
+    about:
+      website: https://learn.microsoft.com
+      description: "Technical documentation and learning resources from Microsoft"
 
 
   # MongoDB engine
@@ -1229,10 +1279,13 @@ engines:
     shortcut: oa
     # https://docs.searxng.org/dev/engines/online/openalex.html
     # Recommended by OpenAlex: join the polite pool with an email address
-    # mailto: "[email protected]"
+    # openalex_api_email: your.email@example.com
     timeout: 5.0
     categories: [academic, general]
     disabled: false
+    about:
+      website: https://openalex.org
+      description: "Open catalog of scholarly works, authors, institutions, and research topics"
 
   - name: openclipart
     engine: openclipart
@@ -1287,6 +1340,9 @@ engines:
     shortcut: pdb
     categories: [academic, life sciences]
     disabled: false
+    about:
+      website: https://www.ebi.ac.uk/pdbe/
+      description: "Protein Data Bank Europe - 3D structural data of biological macromolecules"
     # Hide obsolete PDB entries.  Default is not to hide obsolete structures
     #  hide_obsolete: false
 
@@ -1321,14 +1377,14 @@ engines:
     timeout: 4.0
     disabled: true
 
-  - name: presearch images
-    engine: presearch
-    network: presearch
-    search_type: images
-    categories: [images, web]
-    timeout: 4.0
-    shortcut: psimg
-    disabled: true
+  # - name: presearch images
+  #   engine: presearch
+  #   network: presearch
+  #   search_type: images
+  #   categories: [images, web]
+  #   timeout: 4.0
+  #   shortcut: psimg
+  #   disabled: true
 
 
   - name: presearch news
@@ -1338,7 +1394,11 @@ engines:
     categories: [news, web]
     timeout: 4.0
     shortcut: psnews
-    disabled: true
+    disabled: false
+    about:
+      website: https://presearch.com
+      description: "Decentralized search engine news results"
+
 
   - name: pub.dev
     engine: xpath
@@ -1360,16 +1420,19 @@ engines:
       require_api_key: false
       results: HTML
 
-  - name: public domain image archive
-    engine: public_domain_image_archive
-    shortcut: pdia
-    disabled: true
+  # - name: public domain image archive
+  #   engine: public_domain_image_archive
+  #   shortcut: pdia
+  #   disabled: true
 
   - name: pubmed
     engine: pubmed
     shortcut: pub
     categories: [academic, life sciences]
     disabled: false
+    about:
+      website: https://pubmed.ncbi.nlm.nih.gov
+      description: "Biomedical literature database from the National Library of Medicine"
 
   - name: pypi
     shortcut: pypi
@@ -1393,12 +1456,13 @@ engines:
     categories: news
     network: qwant
 
-  - name: qwant images
-    qwant_categ: images
-    engine: qwant
-    shortcut: qwi
-    categories: [images, web]
-    network: qwant
+  # - name: qwant images
+  #   qwant_categ: images
+  #   engine: qwant
+  #   shortcut: qwi
+  #   categories: [images, web]
+  #   network: qwant
+  #   disabled: true
 
   - name: qwant videos
     qwant_categ: videos
@@ -1491,10 +1555,10 @@ engines:
     about:
       website: https://searchmysite.net
 
-  - name: selfhst icons
-    engine: selfhst
-    shortcut: si
-    disabled: true
+  # - name: selfhst icons
+  #   engine: selfhst
+  #   shortcut: si
+  #   disabled: true
 
 
 
@@ -1557,6 +1621,9 @@ engines:
     shortcut: se
     categories: [academic, general]
     disabled: false
+    about:
+      website: https://www.semanticscholar.org
+      description: "AI-powered research tool for scientific literature with citation analysis"
 
   # Spotify needs API credentials
   # - name: spotify
@@ -1584,25 +1651,26 @@ engines:
     api_key: ""
     inactive: true
 
-  - name: startpage
-    engine: startpage
+  # - name: startpage
+  #   engine: startpage
     shortcut: sp
     startpage_categ: web
     categories: [general, web]
     additional_tests:
       rosebud: *test_rosebud
 
-  - name: startpage news
-    engine: startpage
-    startpage_categ: news
-    categories: [news, web]
-    shortcut: spn
+  # - name: startpage news
+  #   engine: startpage
+  #   startpage_categ: news
+  #   categories: [news, web]
+  #   shortcut: spn
 
-  - name: startpage images
-    engine: startpage
-    startpage_categ: images
-    categories: [images, web]
-    shortcut: spi
+  # - name: startpage images
+  #   engine: startpage
+  #   startpage_categ: images
+  #   categories: [images, web]
+  #   shortcut: spi
+  #   disabled: true
 
 
 
@@ -1626,8 +1694,8 @@ engines:
   #      WHERE title LIKE :wildcard OR description LIKE :wildcard
   #      ORDER BY duration DESC
 
-  - name: tagesschau
-    engine: tagesschau
+  # - name: tagesschau
+  #   engine: tagesschau
     # when set to false, display URLs from Tagesschau, and not the actual source
     # (e.g. NDR, WDR, SWR, HR, ...)
     use_source_url: true
@@ -1636,7 +1704,7 @@ engines:
 
 
   # Requires Tor
-  - name: torch
+  # - name: torch
     engine: xpath
     paging: true
     search_url:
@@ -1695,19 +1763,22 @@ engines:
     disabled: true
     inactive: true
 
-  - name: yandex images
-    engine: yandex
-    categories: images
-    search_type: images
-    shortcut: ydi
-    disabled: true
-    inactive: true
+  # - name: yandex images
+  #   engine: yandex
+  #   categories: images
+  #   search_type: images
+  #   shortcut: ydi
+  #   disabled: true
+  #   inactive: true
 
 
   - name: yahoo
     engine: yahoo
     shortcut: yh
-    disabled: true
+    disabled: false
+    about:
+      website: https://www.yahoo.com
+      description: "Web search engine powered by Bing"
 
   - name: yahoo news
     engine: yahoo_news
@@ -1736,7 +1807,7 @@ engines:
     categories: [general, wikimedia]
     base_url: "https://{language}.wikibooks.org/"
     search_type: text
-    disabled: true
+    disabled: false
     about:
       website: https://www.wikibooks.org/
       wikidata_id: Q367
@@ -1773,7 +1844,7 @@ engines:
     categories: [general, wikimedia]
     base_url: "https://{language}.wikisource.org/"
     search_type: text
-    disabled: true
+    disabled: false
     about:
       website: https://www.wikisource.org/
       wikidata_id: Q263
@@ -1784,7 +1855,7 @@ engines:
     categories: [general, science, wikimedia]
     base_url: "https://species.wikimedia.org/"
     search_type: text
-    disabled: true
+    disabled: false
     about:
       website: https://species.wikimedia.org/
       wikidata_id: Q13679
@@ -1816,7 +1887,7 @@ engines:
     categories: [general, wikimedia]
     base_url: "https://{language}.wikiversity.org/"
     search_type: text
-    disabled: true
+    disabled: false
     about:
       website: https://www.wikiversity.org/
       wikidata_id: Q370
@@ -1833,11 +1904,12 @@ engines:
       website: https://www.wikivoyage.org/
       wikidata_id: Q373
 
-  - name: wikicommons.images
-    engine: wikicommons
-    shortcut: wci
-    categories: images
-    wc_search_type: image
+  # - name: wikicommons.images
+  #   engine: wikicommons
+  #   shortcut: wci
+  #   categories: images
+  #   wc_search_type: image
+  #   disabled: true
 
   - name: wikicommons.videos
     engine: wikicommons
@@ -1929,13 +2001,13 @@ engines:
     categories: [general, web]
     disabled: true
 
-  - name: mojeek images
-    shortcut: mjkimg
-    engine: mojeek
-    categories: [images, web]
-    search_type: images
-    paging: false
-    disabled: true
+  # - name: mojeek images
+  #   shortcut: mjkimg
+  #   engine: mojeek
+  #   categories: [images, web]
+  #   search_type: images
+  #   paging: false
+  #   disabled: true
 
   - name: mojeek news
     shortcut: mjknews
@@ -1943,7 +2015,10 @@ engines:
     categories: [news, web]
     search_type: news
     paging: false
-    disabled: true
+    disabled: false
+    about:
+      website: https://www.mojeek.com
+      description: "Independent crawler-based search engine news results"
 
 
   - name: naver
@@ -1952,12 +2027,12 @@ engines:
     shortcut: nvr
     disabled: true
 
-  - name: naver images
-    naver_category: images
-    categories: [images]
-    engine: naver
-    shortcut: nvri
-    disabled: true
+  # - name: naver images
+  #   naver_category: images
+  #   categories: [images]
+  #   engine: naver
+  #   shortcut: nvri
+  #   disabled: true
 
   - name: naver news
     naver_category: news
@@ -2046,13 +2121,13 @@ engines:
     seekr_category: news
     disabled: true
 
-  - name: seekr images
-    engine: seekr
-    network: seekr news
-    shortcut: seimg
-    categories: images
-    seekr_category: images
-    disabled: true
+  # - name: seekr images
+  #   engine: seekr
+  #   network: seekr news
+  #   shortcut: seimg
+  #   categories: images
+  #   seekr_category: images
+  #   disabled: true
 
 
   - name: stract
@@ -2060,17 +2135,17 @@ engines:
     shortcut: str
     disabled: true
 
-  - name: svgrepo
-    engine: svgrepo
-    shortcut: svg
-    timeout: 10.0
-    disabled: true
+  # - name: svgrepo
+  #   engine: svgrepo
+  #   shortcut: svg
+  #   timeout: 10.0
+  #   disabled: true
 
 
-  - name: uxwing
-    engine: uxwing
-    shortcut: ux
-    disabled: true
+  # - name: uxwing
+  #   engine: uxwing
+  #   shortcut: ux
+  #   disabled: true
 
   - name: voidlinux
     engine: voidlinux
@@ -2111,13 +2186,17 @@ engines:
     categories: [general, web]
     brave_category: search
     # brave_spellcheck: true
+    about:
+      website: https://search.brave.com
+      description: "Independent privacy-focused search engine with own index"
 
-  - name: brave.images
-    engine: brave
-    network: brave
-    shortcut: brimg
-    categories: [images, web]
-    brave_category: images
+  # - name: brave.images
+  #   engine: brave
+  #   network: brave
+  #   shortcut: brimg
+  #   categories: [images, web]
+  #   brave_category: images
+  #   disabled: true
 
 
   - name: brave.news
