@@ -61,13 +61,13 @@ RUN sed -i 's/margin-top:26vh/margin:0!important;padding:0!important;display:fle
     sed -i 's/margin-top:6em}/margin-top:0}/g' ./searx/static/themes/simple/css/searxng-rtl.min.css
 
 # Set version branding for LDR-academic fork
-RUN sed -i "s/searxng_extra_version = ''/searxng_extra_version = '-LDR-academic-0.2.1'/g" searx/version.py && \
-    echo "VERSION_STRING = 'v0.2.1'" > ./searx/version_frozen.py && \
-    echo "VERSION_TAG = 'v0.2.1'" >> ./searx/version_frozen.py && \
-    echo "DOCKER_TAG = '0.2.1-ldr.academic'" >> ./searx/version_frozen.py && \
+RUN sed -i "s/searxng_extra_version = ''/searxng_extra_version = '-LDR-academic-0.2.2'/g" searx/version.py && \
+    echo "VERSION_STRING = 'v0.2.2'" > ./searx/version_frozen.py && \
+    echo "VERSION_TAG = 'v0.2.2'" >> ./searx/version_frozen.py && \
+    echo "DOCKER_TAG = '0.2.2-ldr.academic'" >> ./searx/version_frozen.py && \
     echo "GIT_URL = 'https://github.com/porespellar/searxng-LDR-academic'" >> ./searx/version_frozen.py && \
     echo "GIT_BRANCH = 'main'" >> ./searx/version_frozen.py && \
-    echo "GIT_REVISION = 'v0.2.1'" >> ./searx/version_frozen.py
+    echo "GIT_REVISION = 'v0.2.2'" >> ./searx/version_frozen.py
 
 ARG TIMESTAMP_SETTINGS="0"
 
@@ -119,9 +119,9 @@ COPY --chown=977:977 ./searx/limiter.toml /etc/searxng/limiter.toml
 
 # Set build metadata
 ARG CREATED="0001-01-01T00:00:00Z"
-ARG VERSION="0.2.1-ldr.academic"
+ARG VERSION="0.2.2-ldr.academic"
 ARG VCS_URL="https://github.com/porespellar/searxng-LDR-academic"
-ARG VCS_REVISION="v0.2.1"
+ARG VCS_REVISION="v0.2.2"
 
 # Add OCI labels
 LABEL org.opencontainers.image.created="$CREATED" \

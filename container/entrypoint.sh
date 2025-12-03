@@ -110,8 +110,10 @@ EOF
 EOF
         cp -pfT "$template" "$target"
 
-        sed -i "s/ultrasecretkey/$(head -c 24 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9')/g" "$target"
     fi
+    
+    # Always replace default secret key if present
+    sed -i "s/ultrasecretkey/$(head -c 24 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9')/g" "$target"
 
     check_file "$target"
 }
