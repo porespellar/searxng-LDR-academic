@@ -128,6 +128,7 @@ volume_handler "$DATA_PATH"
 
 # Check for files
 config_handler "$SEARXNG_SETTINGS_PATH" "/usr/local/searxng/searx/settings.yml"
+config_handler "/etc/searxng/limiter.toml" "/usr/local/searxng/searx/limiter.toml"
 
 update-ca-certificates
 

@@ -21,6 +21,15 @@ RUN --mount=type=cache,id=uv,target=/root/.cache/uv set -eux -o pipefail; \
 
 COPY --exclude=./searx/version_frozen.py ./searx/ ./searx/
 
+# Set version branding for LDR-academic fork
+RUN sed -i "s/searxng_extra_version = ''/searxng_extra_version = '-LDR-academic-0.2.4'/g" searx/version.py && \
+    echo "VERSION_STRING = 'v0.2.4'" > ./searx/version_frozen.py && \
+    echo "VERSION_TAG = 'v0.2.4'" >> ./searx/version_frozen.py && \
+    echo "DOCKER_TAG = '0.2.4-ldr.academic'" >> ./searx/version_frozen.py && \
+    echo "GIT_URL = 'https://github.com/porespellar/searxng-LDR-academic'" >> ./searx/version_frozen.py && \
+    echo "GIT_BRANCH = 'main'" >> ./searx/version_frozen.py && \
+    echo "GIT_REVISION = 'v0.2.4'" >> ./searx/version_frozen.py
+
 ARG TIMESTAMP_SETTINGS="0"
 
 RUN set -eux -o pipefail; \

@@ -7,7 +7,7 @@ FROM ghcr.io/searxng/base:searxng AS dist
 COPY --chown=977:977 --from=builder /usr/local/searxng/.venv/ ./.venv/
 COPY --chown=977:977 --from=builder /usr/local/searxng/searx/ ./searx/
 COPY --chown=977:977 ./container/ ./
-COPY --chown=977:977 ./searx/version_frozen.py ./searx/
+COPY --chown=977:977 --from=builder /usr/local/searxng/searx/version_frozen.py ./searx/
 
 ARG CREATED="0001-01-01T00:00:00Z"
 ARG VERSION="unknown"
@@ -15,14 +15,14 @@ ARG VCS_URL="unknown"
 ARG VCS_REVISION="unknown"
 
 LABEL org.opencontainers.image.created="$CREATED" \
-      org.opencontainers.image.description="SearXNG is a metasearch engine. Users are neither tracked nor profiled." \
-      org.opencontainers.image.documentation="https://docs.searxng.org/admin/installation-docker" \
-      org.opencontainers.image.licenses="AGPL-3.0-or-later" \
-      org.opencontainers.image.revision="$VCS_REVISION" \
-      org.opencontainers.image.source="$VCS_URL" \
-      org.opencontainers.image.title="SearXNG" \
-      org.opencontainers.image.url="https://searxng.org" \
-      org.opencontainers.image.version="$VERSION"
+    org.opencontainers.image.description="SearXNG is a metasearch engine. Users are neither tracked nor profiled." \
+    org.opencontainers.image.documentation="https://docs.searxng.org/admin/installation-docker" \
+    org.opencontainers.image.licenses="AGPL-3.0-or-later" \
+    org.opencontainers.image.revision="$VCS_REVISION" \
+    org.opencontainers.image.source="$VCS_URL" \
+    org.opencontainers.image.title="SearXNG" \
+    org.opencontainers.image.url="https://searxng.org" \
+    org.opencontainers.image.version="$VERSION"
 
 ENV SEARXNG_VERSION="$VERSION" \
     SEARXNG_SETTINGS_PATH="$CONFIG_PATH/settings.yml" \

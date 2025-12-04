@@ -718,13 +718,13 @@ engines:
     about:
       website: https://duckduckgo.com
 
-  - name: ecosia
-    engine: ecosia
-    shortcut: eco
-    disabled: false
-    about:
-      website: https://www.ecosia.org/
-      description: "Search engine that plants trees with its ad revenue"
+#  - name: ecosia
+#    engine: ecosia
+#    shortcut: eco
+#    disabled: false
+#    about:
+#      website: https://www.ecosia.org/
+#      description: "Search engine that plants trees with its ad revenue"
 
   # - name: duckduckgo images
   #   engine: duckduckgo_extra
