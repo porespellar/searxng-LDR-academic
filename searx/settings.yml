@@ -717,7 +717,14 @@ engines:
     shortcut: ddg
     about:
       website: https://duckduckgo.com
-      description: "Privacy-focused search engine that doesn't track users"
+
+  - name: ecosia
+    engine: ecosia
+    shortcut: eco
+    disabled: false
+    about:
+      website: https://www.ecosia.org/
+      description: "Search engine that plants trees with its ad revenue"
 
   # - name: duckduckgo images
   #   engine: duckduckgo_extra
@@ -1999,7 +2006,10 @@ engines:
     shortcut: mjk
     engine: mojeek
     categories: [general, web]
-    disabled: true
+    disabled: false
+    about:
+      website: https://www.mojeek.com/
+      description: "Independent crawler-based search engine with its own index"
 
   # - name: mojeek images
   #   shortcut: mjkimg
